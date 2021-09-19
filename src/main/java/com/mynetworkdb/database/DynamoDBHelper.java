@@ -1,4 +1,4 @@
-package com.mynetworkdb.dyanamo;
+package com.mynetworkdb.database;
 
 public class DynamoDBHelper {
 }
