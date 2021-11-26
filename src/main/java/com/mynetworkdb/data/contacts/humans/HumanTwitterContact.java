@@ -1,19 +1,19 @@
 package com.mynetworkdb.data.contacts.humans;
 
-public class TwitterContact extends HumanContact {
+import com.mynetworkdb.data.interfaces.TwitterInterface;
+
+public class HumanTwitterContact extends HumanContact implements TwitterInterface {
     private String handle;
 
-    public TwitterContact() {
-        super();
-    }
+    public HumanTwitterContact() {}
 
-    public TwitterContact(String[] input) {
+    public HumanTwitterContact(String[] input){
         super(input);
         this.handle = input[4];
     }
 
     public String getHandle() {
-        return handle;
+        return this.handle;
     }
 
     public void setHandle(String handle) {

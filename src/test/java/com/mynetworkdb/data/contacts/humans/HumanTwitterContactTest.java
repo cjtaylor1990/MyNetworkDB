@@ -7,11 +7,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
-public class TwitterContactTest extends BaseTestClass {
+public class HumanTwitterContactTest extends BaseTestClass {
 
     @Test
     public void testInstantiatesWithDefaultConstructor() {
-        TwitterContact contact = new TwitterContact();
+        HumanTwitterContact contact = new HumanTwitterContact();
         assertNotNull(contact);
         assertNull(contact.getFirstName());
         assertNull(contact.getLastName());
@@ -22,7 +22,7 @@ public class TwitterContactTest extends BaseTestClass {
 
     @Test
     public void testCanSetInstanceVariables() {
-        TwitterContact contact = new TwitterContact();
+        HumanTwitterContact contact = new HumanTwitterContact();
 
         String[] input = new String[]{"Bilbo", "Baggins", "111", "2890-09-22", "bbaggins111"};
         contact.setFirstName(input[0]);
@@ -41,7 +41,7 @@ public class TwitterContactTest extends BaseTestClass {
     @Test
     public void testInstantiatesWithStringArray() {
         String[] input = new String[]{"Bilbo", "Baggins", "111", "2890-09-22", "bbaggins111"};
-        TwitterContact contact = new TwitterContact(input);
+        HumanTwitterContact contact = new HumanTwitterContact(input);
         assertNotNull(contact);
         assertEquals(contact.getFirstName(), input[0]);
         assertEquals(contact.getLastName(), input[1]);
